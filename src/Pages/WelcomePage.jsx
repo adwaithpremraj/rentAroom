@@ -4,7 +4,7 @@ import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
 import {faArrowRight} from '@fortawesome/free-solid-svg-icons';
 
 
-function Landing_Page() {
+function WelcomePage() {
 
 
 
@@ -33,4 +33,4 @@ function Landing_Page() {
     )
 }
 
-export default Landing_Page
+export default WelcomePage
