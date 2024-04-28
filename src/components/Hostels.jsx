@@ -16,9 +16,9 @@ function Hostels() {
     <>
       <h2 className='text-center mb-3'>Recently Added Properties</h2>
       <div className='d-flex align-items-center justify-content-center'>
-      <Button variant="primary mx-1">All Categories</Button>{' '}
-      <Button variant="secondary ">Mens Hostel</Button>{' '}
-      <Button variant="secondary mx-1">Womens Hostel</Button>{' '}
+      <Button style={{backgroundColor:'#A79277'}} className='btn  btn-outline-dark' variant=" mx-1">All Categories</Button>{' '}
+      <Button style={{backgroundColor:'#EAD8C0'}} variant=" ">Mens Hostel</Button>{' '}
+      <Button style={{backgroundColor:'#EAD8C0'}} variant=" mx-1">Womens Hostel</Button>{' '}
       </div>
 
       <Container className='d-flex align-items-center justify-content-center mx-auto '>
