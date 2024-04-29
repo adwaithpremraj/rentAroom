@@ -4,6 +4,7 @@ import WelcomePage from './Pages/WelcomePage'
 import Footer from './components/Footer'
 import Header from './components/Header'
 import { Routes,Route } from 'react-router-dom'
+import Payment from './components/Payment'
 
 
 function App() {
@@ -15,7 +16,7 @@ function App() {
         <Routes>
           <Route path='/' element={<WelcomePage/>}/>
           <Route path='/home' element={<Home/>}/>
-
+           <Route path='/pay' element={<Payment/>}/>
 
           
         </Routes>
