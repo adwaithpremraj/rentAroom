@@ -48,6 +48,10 @@ function Payment() {
 </select>
 </div>
 
+<div className='d-flex justify-content-end'>
+  <button className='btn btn-success m-2 '>Pay Now</button>
+</div>
+
       </div>
       
 
