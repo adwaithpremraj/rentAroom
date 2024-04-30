@@ -3,6 +3,7 @@ import Login from './Authentication/Login'
 import Signup from './Authentication/Signup'
 
 import Home from './Pages/Home'
+import HostelDetails from './Pages/HostelDetails'
 import WelcomePage from './Pages/WelcomePage'
 import Footer from './components/Footer'
 import Header from './components/Header'
@@ -20,6 +21,7 @@ function App() {
           <Route path='/home' element={<Home/>}/>
           <Route path='/Login' element={<Login/>}/>
           <Route path='/Signup' element={<Signup/>}/>
+          <Route path='/details' element={<HostelDetails/>}/>
 
 
 
