@@ -1,0 +1,51 @@
+
+#mode{
+    border: 2px solid grey;
+    background-color: grey;
+  }
+  #caur{
+      margin-left: 100px;
+      margin-right: 100px;
+      margin-top: 10px;
+      overflow-x: hidden;
+  }
+  .hostel-container{
+      width: 100%;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-rows: repeat(2, 1fr);
+      grid-gap: 10px;
+      margin-top: 50px;
+      margin-left: 10px;
+  }
+  
+  #box{
+      border: 2px solid grey;
+      width: 140px;
+      background-color: grey;
+  }
+  
+  .hostel-card{
+      background-color: #e9edc9;
+      border-radius: 10px;
+      overflow: hidden;
+      padding: 10px;
+      
+  }
+  
+  
+  
+  .hostel-card:nth-child(1){
+      grid-column: span 2;
+  }
+  .hostel-card:nth-child(3){
+      grid-column: span 2;
+  }
+  
+  .hostel-card:nth-child(4){
+      grid-row: span 2;
+  }
+  .hostel-card:nth-child(5){
+      grid-column: span 2;
+  }
+  

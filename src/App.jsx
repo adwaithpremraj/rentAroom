@@ -1,5 +1,6 @@
 import './App.css'
 import Home from './Pages/Home'
+import HostelDetails from './Pages/HostelDetails'
 import WelcomePage from './Pages/WelcomePage'
 import Footer from './components/Footer'
 import Header from './components/Header'
@@ -15,6 +16,7 @@ function App() {
         <Routes>
           <Route path='/' element={<WelcomePage/>}/>
           <Route path='/home' element={<Home/>}/>
+          <Route path='/details' element={<HostelDetails/>}/>
 
 
           
