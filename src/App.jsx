@@ -1,4 +1,7 @@
 import './App.css'
+import Login from './Authentication/Login'
+import Signup from './Authentication/Signup'
+
 import Home from './Pages/Home'
 import WelcomePage from './Pages/WelcomePage'
 import Footer from './components/Footer'
@@ -15,6 +18,9 @@ function App() {
         <Routes>
           <Route path='/' element={<WelcomePage/>}/>
           <Route path='/home' element={<Home/>}/>
+          <Route path='/Login' element={<Login/>}/>
+          <Route path='/Signup' element={<Signup/>}/>
+
 
 
           

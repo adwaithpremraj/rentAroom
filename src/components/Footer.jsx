@@ -24,9 +24,9 @@ function Footer() {
                 <div className="col-md-2">
                    
                 
-                    <Link className='text-dark' to={'/'}> <p className='mt-4'>Home</p></Link>
-                    <Link className='text-dark' to={'/'}> <p> Contact Us</p></Link>
-                    <Link className='text-dark' to={'/'}><p>About Us</p></Link>
+                    <Link className='text-dark' to={'/home'}> <p className='mt-4'>Home</p></Link>
+                    <Link className='text-dark' to={'/home'}> <p> Contact Us</p></Link>
+                    <Link className='text-dark' to={'/home'}><p>About Us</p></Link>
                     
                     
                 </div>
