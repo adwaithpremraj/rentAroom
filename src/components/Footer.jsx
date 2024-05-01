@@ -14,8 +14,8 @@ function Footer() {
     <>
      <div className="row p-5 " style={{color:'black',backgroundColor:'rgb(234, 249, 255)'}}>
                 <div className="col-md-4 ">
-                    <h3 style={{color:'#384f95',fontWeight:'550'}}><img className='mb-2 me-2' src="./src/assets/kisspng-font-awesome-computer-icons-font-housing-logo-5ada418ca7aed3.3537227915242530686869.png" alt="img" height={'40px'} />Find My Hostel</h3>
-                    <p className='mt-3'>      FindMyIndia is india's fastest growing affortablev "Hostels and PGs lsisting platform  that make it easier for you to find the best suited place for your budget and needs.
+                    <h3 style={{color:'#384f95',fontWeight:'550'}}><img className='mb-2 me-2' src="./src/assets/kisspng-font-awesome-computer-icons-font-housing-logo-5ada418ca7aed3.3537227915242530686869.png" alt="img" height={'40px'} />RentARoom</h3>
+                    <p className='mt-3'>      RentARoom is india's fastest growing affortable "Hostels and PGs lnsisting platform  that make it easier for you to find the best suited place for your budget and needs.
                     <br />
                     <br />
                      Ernakulam | Trivandrum | kozhikode | Thrissur | Malappuram |  Coimabatore | Madurai | Salem |</p>
@@ -42,7 +42,7 @@ function Footer() {
             
                     <div className=' mt-4'>
                     <div className='mb-4 p-2 text-light' style={{border:'1px solid transparent', backgroundColor:'rgb(45, 141, 173)', borderRadius:'50px', height:'40px'}}>
-                    <FontAwesomeIcon icon={faEnvelope} className='ms-3' /> <span >Mail : contact@findmyhostel.in</span>
+                    <FontAwesomeIcon icon={faEnvelope} className='ms-3' /> <span >Mail : contact@rentaroom.in</span>
                      </div>
 
             <div className=' p-2 text-light' style={{border:'1px solid transparent', backgroundColor:'rgb(45, 141, 173)', borderRadius:'50px',  height:'40px'}}>
