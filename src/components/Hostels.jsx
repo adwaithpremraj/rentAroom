@@ -6,6 +6,7 @@ import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowRight, faBrush, faMotorcycle, faPeopleRoof, faWifi } from '@fortawesome/free-solid-svg-icons';
+import { Link } from 'react-router-dom';
 
 
 function Hostels() {
@@ -25,31 +26,33 @@ function Hostels() {
       <Row className='d-flex align-items-center justify-content-center mt-5  mx-auto'>
       
       <Col className='mb-4'>
-          <Card style={{ width: '18rem' }}>
-            <Card.Img variant="top" src="https://i.pinimg.com/originals/f6/c9/a3/f6c9a3cbb33bc8bbed47844c4b7852ae.jpg" />
-            <Card.Body>
+          <Link to='/details'>
+            <Card style={{ width: '18rem' }}>
+              <Card.Img variant="top" src="https://i.pinimg.com/originals/f6/c9/a3/f6c9a3cbb33bc8bbed47844c4b7852ae.jpg" />
+              <Card.Body>
+                
+                    <p>Mens Hostel</p>
+                    
               
-                  <p>Mens Hostel</p>
-                  
-            
-              <Card.Text>
-              <div className='d-flex align-items-center justify-content-between'>
-                <h6>₹4600/month</h6>
-                <FontAwesomeIcon icon={faArrowRight} />
-              </div>
-              <h6>Olive Ladies Hostel</h6>
-              <p>Chittethukara, Kochi, Kakk...</p>
-              </Card.Text>
-              <hr />
-              <div className='d-flex align-items-center justify-content-evenly'>
-              <FontAwesomeIcon icon={faWifi} />
-              <FontAwesomeIcon icon={faMotorcycle} />
-              <FontAwesomeIcon icon={faBrush} />
-              <FontAwesomeIcon icon={faPeopleRoof} />
-              
-              </div>
-            </Card.Body>
-          </Card>
+                <Card.Text>
+                <div className='d-flex align-items-center justify-content-between'>
+                  <h6>₹4600/month</h6>
+                  <FontAwesomeIcon icon={faArrowRight} />
+                </div>
+                <h6>Olive Ladies Hostel</h6>
+                <p>Chittethukara, Kochi, Kakk...</p>
+                </Card.Text>
+                <hr />
+                <div className='d-flex align-items-center justify-content-evenly'>
+                <FontAwesomeIcon icon={faWifi} />
+                <FontAwesomeIcon icon={faMotorcycle} />
+                <FontAwesomeIcon icon={faBrush} />
+                <FontAwesomeIcon icon={faPeopleRoof} />
+                
+                </div>
+              </Card.Body>
+            </Card>
+          </Link>
     </Col>
 
     <Col className='mb-4'>

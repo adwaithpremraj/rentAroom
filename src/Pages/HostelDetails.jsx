@@ -9,7 +9,7 @@ function HostelDetails() {
     
     <div>
 
-        <Carousel id='caur' >
+        {/* <Carousel id='caur' >
           <Carousel.Item>
             <img style={{width:'100%', height:'500px'}} src="https://0e1f9520cfbb74a61ba4-0c2137d93f8d1ba7abe4c5e2888a558f.ssl.cf1.rackcdn.com/1484737203254IMG7152.jpeg" alt="ssss" />
           </Carousel.Item>
@@ -19,7 +19,30 @@ function HostelDetails() {
           <Carousel.Item>
             <img style={{width:'100%', height:'500px'}} src="https://0e1f9520cfbb74a61ba4-0c2137d93f8d1ba7abe4c5e2888a558f.ssl.cf1.rackcdn.com/1484737203254IMG7152.jpeg" alt="" />
           </Carousel.Item>
-        </Carousel>
+        </Carousel> */}
+
+        <div className="row " style={{height:'70vh'}}>
+            <div className="col-6 ">    
+                    <img style={{width:'100%', height:'70vh',backgroundSize: "contain"}}
+                    src="https://0e1f9520cfbb74a61ba4-0c2137d93f8d1ba7abe4c5e2888a558f.ssl.cf1.rackcdn.com/1484737203254IMG7152.jpeg" alt="ssss" />
+            </div>
+            <div className="col-6 ">
+                <div className="row" style={{height:'35vh'}}>
+                <img style={{width:'100%', height:'35vh',backgroundSize: "contain"}}
+                    src="https://0e1f9520cfbb74a61ba4-0c2137d93f8d1ba7abe4c5e2888a558f.ssl.cf1.rackcdn.com/1484737203254IMG7152.jpeg" alt="ssss" />
+            
+                </div>
+                <div className="row " style={{height:'35vh'}}>
+                <img style={{width:'100%', height:'35vh',backgroundSize: "contain"}}
+                    src="https://0e1f9520cfbb74a61ba4-0c2137d93f8d1ba7abe4c5e2888a558f.ssl.cf1.rackcdn.com/1484737203254IMG7152.jpeg" alt="ssss" />
+              
+                </div>
+
+
+            </div>
+        </div>
+
+
 
         <div>
             <div class="hostel-container">
