@@ -4,19 +4,17 @@ import React from 'react'
 import { Nav, Button } from 'react-bootstrap';
 import Container from 'react-bootstrap/Container';
 import Navbar from 'react-bootstrap/Navbar';
-import { useNavigate } from 'react-router-dom';
 
 function Header() {
-  const navigate = useNavigate()
   return (
-    <Navbar expand="lg" className=" px-5 py-2" style={{backgroundColor:"#EAD8C0"}}>
+    <Navbar expand="lg" className=" px-5 py-2" style={{backgroundColor:"rgb(234, 249, 255)"}}>
       <Container fluid>
         <Navbar.Brand href="#" className='text-dark' style={{fontWeight:'550',color: "#384f95"}} ><img className='mb-2' src="./src/assets/kisspng-font-awesome-computer-icons-font-housing-logo-5ada418ca7aed3.3537227915242530686869.png" alt="img" height={'40px'} /> Find My Hostel</Navbar.Brand>
         <Navbar.Toggle aria-controls="navbarScroll" />
         <Navbar.Collapse id="navbarScroll">
             <Nav className='ms-auto '>
-                <Button onClick={() =>navigate('/Login')}className='btn btn-outline-dark' style={{backgroundColor:'#A79277'}}>SignIn <FontAwesomeIcon icon={faArrowRight} /></Button>
-                <Button className='btn btn-outline-dark ms-3 me-3' style={{backgroundColor:'#A79277'}}>Add Your Hostel <FontAwesomeIcon icon={faMapLocation} /></Button>
+                <Button className='btn-outline-light' style={{border:'1px solid transparent', backgroundColor:'rgb(45, 141, 173)'}}>SignIn <FontAwesomeIcon icon={faArrowRight} /></Button>
+                <Button className=' ms-3 me-3'style={{border:'1px solid transparent', backgroundColor:'rgb(45, 141, 173)'}}>Add Your Hostel <FontAwesomeIcon icon={faMapLocation} /></Button>
 
             </Nav>
 
