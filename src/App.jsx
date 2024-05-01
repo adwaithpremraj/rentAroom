@@ -8,6 +8,7 @@ import WelcomePage from './Pages/WelcomePage'
 import Footer from './components/Footer'
 import Header from './components/Header'
 import { Routes,Route } from 'react-router-dom'
+import Payment from './components/Payment'
 
 
 function App() {
@@ -22,6 +23,7 @@ function App() {
           <Route path='/Login' element={<Login/>}/>
           <Route path='/Signup' element={<Signup/>}/>
           <Route path='/details' element={<HostelDetails/>}/>
+          <Route path='/pay' element={<Payment/>}/>
 
 
 
