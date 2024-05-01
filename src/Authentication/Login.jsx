@@ -1,9 +1,8 @@
+
 import React from "react";
 import email from "../assets/email.webp";
 import lock from "../assets/lock1.webp";
 import Button from "react-bootstrap/Button";
-
-import "./login.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faFacebook, faGoogle } from "@fortawesome/free-brands-svg-icons";
 import { Link, useNavigate } from "react-router-dom";
@@ -11,124 +10,111 @@ import { Link, useNavigate } from "react-router-dom";
 function Login() {
   const navigate = useNavigate();
   return (
-    <div>
-      <div style={{ height: "60vh", width: "100vh", borderRadius: "1rem", backgroundColor:"rgb(234, 249, 255)" }}
-      className="container mb-5">
-
-      <div className="row"  style={{ height: "60vh", width: "100vh", borderRadius: "1rem", backgroundColor:"rgb(234, 249, 255)" }}>
-            <div className="col-6"  >
-              <img src="https://imgs.bharatmatrimony.com/bmimgs/login/login-otp-banner.png" alt="" />
-
+    <div className="container my-5 " style={{borderRadius: "1rem", backgroundColor:"rgb(234, 249, 255)" }}>
+      <div className="row">
+        <div className="col-lg-6">
+          <img
+            className=""
+            src="https://imgs.bharatmatrimony.com/bmimgs/login/login-otp-banner.png"
+            alt=""
+            className="img-fluid"
+          />
+        </div>
+        <div className="col-lg-6">
+          <div className="header">
+            <div style={{ fontWeight: "bold", fontSize: "130%" ,color: "rgb(45, 141, 173)"}} className="fs-3">
+              Login
             </div>
-            <div className="col-6">
-              <div>
-                <div className="header">
-                  <div style={{ fontWeight: "bold", fontSize: "130%" }} className="text-dark">
-                    Login
-                  </div>
-                  <div className="underline"></div>
-                </div>
+            <div className="underline"></div>
+          </div>
 
-                <div className="inputs m-2 justify-content-center d-flex flex-column align-items-center">
-                  <div className="input d-flex align-items-center   ">
-                    <img
-                      style={{
-                        borderRadius: "20rem",
-                        height: "25px",
-                        width: "25px",
-                        marginRight: "1rem",
-                      }}
-                      src={email}
-                      alt=""
-                    />
-                    <input
-                      className="form-control border-info"
-                      type="text"
-                      placeholder="enter your emailid"
-                      style={{ fontWeight: "revert-layer", width: "290px" }}
-                    />
-                  </div>
-
-                  <div className="input d-flex align-items-center ">
-                    <img
-                      style={{
-                        borderRadius: "20rem",
-                        height: "25px",
-                        width: "25px",
-                        marginRight: "1rem",
-                      }}
-                      src={lock}
-                      alt=""
-                    />
-                    <input
-                      className="form-control border-info  "
-                      type="email"
-                      placeholder=" password"
-                      style={{ fontWeight: "inherit", width: "290px" }}
-                    />
-                  </div>
-                </div>
-
-                <div className="d-flex justfy-content-center align-items-center flex-column mt-1">
-                  <h6 style={{ color: "blue" }}>Forgot password?</h6>
-                </div>
-
-                <div className="justify-content-center d-flex  mt-2">
-                  <Button 
-                    onClick={() => navigate("/home")}
-                    style={{ width: "280px", marginLeft: "3rem" ,backgroundColor:'rgb(45, 141, 173)'}}
-                    variant="primary"
-                  >
-                    Login
-                  </Button>{" "}
-                </div>
-
-                <div
-                  style={{ fontWeight: "", fontSize: "90%", marginTop: "2rem" }}
-                  className="d-flex justfy-content-center align-items-center flex-column"
-                >
-                  <p >
-                    dont have an account?{" "}
-                    <Link to="/Signup">
-                      <span style={{ color: "blue" }}>signup</span>
-                    </Link>
-                  </p>
-                </div>
-
-                <div className="justify-content-center d-flex flex-column align-items-center">
-                  <h6 style={{ marginTop: "2px" }}>or</h6>
-                  <div className="justify-content-center d-flex  mt-2">
-                    <Button
-                      style={{ width: "280px", marginLeft: "3rem",backgroundColor:'rgb(45, 141, 173)' }}
-                      variant="primary"
-                    >
-                      {" "}
-                      <FontAwesomeIcon icon={faFacebook} className="me-3" />
-                      login with facebook
-                    </Button>{" "}
-                  </div>
-
-                  <div className="justify-content-center d-flex  mt-4">
-                    <Button
-                      style={{ width: "280px", marginLeft: "3rem" }}
-                      variant="outline-secondary"
-                    >
-                      <FontAwesomeIcon
-                        icon={faGoogle}
-                        className="me-4"
-                        style={{ color: "" }}
-                      />
-                      login with google
-                    </Button>{" "}
-                  </div>
-                </div>
-              </div>
+          <div className="inputs m-2 justify-content-center d-flex flex-column align-items-center">
+            <div className="input d-flex align-items-center">
+              <img
+                style={{
+                  borderRadius: "20rem",
+                  height: "25px",
+                  width: "25px",
+                  marginRight: "1rem",
+                }}
+                src={email}
+                alt=""
+              />
+              <input
+                className="form-control border-info"
+                type="text"
+                placeholder="Enter your email"
+                style={{ width: "100%" }}
+              />
             </div>
 
-      </div>
+            <div className="input d-flex align-items-center">
+              <img
+                style={{
+                  borderRadius: "20rem",
+                  height: "25px",
+                  width: "25px",
+                  marginRight: "1rem",
+                }}
+                src={lock}
+                alt=""
+              />
+              <input
+                className="form-control border-info"
+                type="password"
+                placeholder="Password"
+                style={{ width: "100%" }}
+              />
+            </div>
+          </div>
 
-      
+          <div className="d-flex justfy-content-center align-items-center flex-column mt-1">
+            <h6 style={{ color: "blue" }}>Forgot password?</h6>
+          </div>
 
+          <div className="justify-content-center d-flex mt-2">
+            <Button
+              onClick={() => navigate("/home")}
+              style={{ width: "60%", backgroundColor: 'rgb(45, 141, 173)' }}
+              variant="primary"
+            >
+              Login
+            </Button>
+          </div>
+
+          <div className="d-flex justfy-content-center align-items-center flex-column mt-2">
+            <p>
+              Don't have an account?{" "}
+              <Link to="/Signup" style={{ color: "blue" }}>
+                Signup
+              </Link>
+            </p>
+          </div>
+
+          <div className="justify-content-center d-flex flex-column align-items-center">
+            <h6 style={{ marginTop: "2px" }}>or</h6>
+            <div className="justify-content-center d-flex mt-2">
+              <Button
+                style={{ width: "100%", backgroundColor: 'rgb(45, 141, 173)' }}
+                variant="primary"
+              >
+                <FontAwesomeIcon icon={faFacebook} className="me-3" />
+                Login with Facebook
+              </Button>
+            </div>
+
+            <div className="justify-content-center d-flex mt-4 mb-5">
+              <Button
+                style={{ width: "100%" }}
+                variant="outline-secondary"
+
+              >
+                <FontAwesomeIcon icon={faGoogle} className="me-4" />
+                Login with Google
+              </Button>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   );
