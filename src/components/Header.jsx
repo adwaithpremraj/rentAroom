@@ -4,8 +4,11 @@ import React from 'react'
 import { Nav, Button } from 'react-bootstrap';
 import Container from 'react-bootstrap/Container';
 import Navbar from 'react-bootstrap/Navbar';
+import { useNavigate } from 'react-router-dom';
 
 function Header() {
+  const navigate = useNavigate()
+
   return (
     <Navbar expand="lg" className=" px-5 py-2" style={{backgroundColor:"rgb(234, 249, 255)"}}>
       <Container fluid>
@@ -13,7 +16,7 @@ function Header() {
         <Navbar.Toggle aria-controls="navbarScroll" />
         <Navbar.Collapse id="navbarScroll">
             <Nav className='ms-auto '>
-                <Button className='btn-outline-light' style={{border:'1px solid transparent', backgroundColor:'rgb(45, 141, 173)'}}>SignIn <FontAwesomeIcon icon={faArrowRight} /></Button>
+                <Button onClick={()=>navigate('./Login')} className='btn-outline-light' style={{border:'1px solid transparent', backgroundColor:'rgb(45, 141, 173)'}}>SignIn <FontAwesomeIcon icon={faArrowRight} /></Button>
                 <Button className=' ms-3 me-3'style={{border:'1px solid transparent', backgroundColor:'rgb(45, 141, 173)'}}>Add Your Hostel <FontAwesomeIcon icon={faMapLocation} /></Button>
 
             </Nav>
