@@ -1,7 +1,7 @@
 .landing{
-    width: 100%;
+    width: auto;
     height: 100vh;
-    background-image: url("https://findmyhostel.in/static/media/cover-image-3.ea89e80e.jpg");
+    background-image: url("https://img.freepik.com/premium-photo/boy-cycling-city-front-big-house-smart_756262-7331.jpg");
     background-size: cover;
     
 }
@@ -11,4 +11,5 @@
     padding-top:90px;
     
 }
+
 
