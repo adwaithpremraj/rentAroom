@@ -43,7 +43,7 @@ function Login() {
                 className="form-control border-info"
                 type="text"
                 placeholder="Enter your email"
-                style={{ width: "100%" }}
+                style={{ fontWeight: 'inherit', width: '290px' }}
               />
             </div>
 
@@ -62,7 +62,7 @@ function Login() {
                 className="form-control border-info"
                 type="password"
                 placeholder="Password"
-                style={{ width: "100%" }}
+                style={{ fontWeight: 'inherit', width: '290px' }}
               />
             </div>
           </div>
@@ -74,7 +74,7 @@ function Login() {
           <div className="justify-content-center d-flex mt-2">
             <Button
               onClick={() => navigate("/home")}
-              style={{ width: "0%", backgroundColor: 'rgb(45, 141, 173)' }}
+              style={{ width: '284px', marginLeft: "3rem", backgroundColor: 'rgb(45, 141, 173)' }}
               variant="primary"
             >
               Login
