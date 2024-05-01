@@ -14,7 +14,6 @@ function Login() {
       <div className="row">
         <div className="col-lg-6">
           <img
-            className=""
             src="https://imgs.bharatmatrimony.com/bmimgs/login/login-otp-banner.png"
             alt=""
             className="img-fluid"
@@ -75,7 +74,7 @@ function Login() {
           <div className="justify-content-center d-flex mt-2">
             <Button
               onClick={() => navigate("/home")}
-              style={{ width: "60%", backgroundColor: 'rgb(45, 141, 173)' }}
+              style={{ width: "0%", backgroundColor: 'rgb(45, 141, 173)' }}
               variant="primary"
             >
               Login
