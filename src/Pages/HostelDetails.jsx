@@ -3,8 +3,72 @@ import './HostelDetails.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBowlFood, faCouch, faDoorClosed, faLocationDot, faMotorcycle, faPhone, faShower, faSink, faWifi } from '@fortawesome/free-solid-svg-icons';
 import { Button } from 'react-bootstrap';
+import { useState , useEffect } from 'react'
+import { payamount } from '../services/allApi';
+
 
 function HostelDetails() {
+
+  useEffect(() => {
+    const script = document.createElement('script');
+    script.src = "https://checkout.razorpay.com/v1/checkout.js";
+    script.async = true;
+    document.body.appendChild(script);
+  }, []);
+
+  const pay_amount = 200;
+  const show_amount  = pay_amount *100;
+  const payHandle = async () => {
+    try {
+      const response = await payamount(show_amount);
+      const order_id = response.id;
+
+      const options = {
+        key: import.meta.env.VITE_KEY_ID, 
+        amount: show_amount ,
+        currency: "INR",
+        name: "SN Women's Hostel",
+        description: "Test Transaction",
+        image: "https://example.com/your_logo",
+        order_id: order_id, 
+        handler: function (response) {
+          // alert(response.razorpay_payment_id);
+          // alert(response.razorpay_order_id);
+          // alert(response.razorpay_signature);
+          alert("Payment Successfull")
+        },
+        prefill: {
+          name: "Gaurav Kumar",
+          email: "gaurav.kumar@example.com",
+          contact: "9999999999"
+        },
+        notes: {
+          address: "Razorpay Corporate Office"
+        },
+        theme: {
+          color: "#3399cc"
+        }
+      };
+
+      const rzp1 = new window.Razorpay(options);
+      rzp1.on('payment.failed', function (response) {
+        alert(response.error.code);
+        alert(response.error.description);
+        alert(response.error.source);
+        alert(response.error.step);
+        alert(response.error.reason);
+        alert(response.error.metadata.order_id);
+        alert(response.error.metadata.payment_id);
+      });
+
+      rzp1.open();
+    } catch (err) {
+      console.error("Error creating Razorpay order:", err);
+    }
+  }
+
+
+
   return (
 
         
@@ -12,21 +76,23 @@ function HostelDetails() {
 
     
             <div className="row m-5 " style={{height:'70vh'}}>
-                <div className="col-6 ">    
-                        <img style={{width:'100%', height:'70vh',backgroundSize: "contain"}}
+              <div className="col-1"></div>
+                <div className="col-5 ">    
+                        <img style={{width:'100%', height:'70vh'}}
                         src="https://0e1f9520cfbb74a61ba4-0c2137d93f8d1ba7abe4c5e2888a558f.ssl.cf1.rackcdn.com/1484737203254IMG7152.jpeg" alt="ssss" />
                 </div>
-                <div className="col-6 ">
+                <div className="col-5 ">
                     <div className="row " style={{height:'35vh'}}>
-                    <img style={{width:'100%', height:'33vh',backgroundSize: "contain"}}
+                    <img style={{width:'100%', height:'33vh'}}
                         src="https://0e1f9520cfbb74a61ba4-0c2137d93f8d1ba7abe4c5e2888a558f.ssl.cf1.rackcdn.com/1484737203254IMG7152.jpeg" alt="ssss" />
                 
                     </div>
                     <div className="row " style={{height:'35vh'}}>
-                    <img style={{width:'100%', height:'35vh',backgroundSize: "contain"}}
+                    <img style={{width:'100%', height:'35vh'}}
                         src="https://0e1f9520cfbb74a61ba4-0c2137d93f8d1ba7abe4c5e2888a558f.ssl.cf1.rackcdn.com/1484737203254IMG7152.jpeg" alt="ssss" />
                   
                     </div>
+                    <div className="col-1"></div>
     
     
                 </div>
@@ -84,6 +150,7 @@ function HostelDetails() {
 
                 <div class="hostel-body px-3" style={{backgroundColor:'rgb(234, 249, 255)',border:'1px soild transparent',borderRadius:'15px'}}>
                             <h1 style={{color:'rgb(45, 141, 173)'}}>RENT</h1>
+                            <button className="btn btn-primary" onClick={payHandle}>PAY</button>
                             <p><b>₹ 2500</b></p>
                             <hr className='m-2'/>
                             <h3 style={{color:'rgb(45, 141, 173)'}}>Additional fee</h3>

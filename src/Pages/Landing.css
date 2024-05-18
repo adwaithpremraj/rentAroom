@@ -1,8 +1,10 @@
 .landing{
     width: auto;
     height: 100vh;
-    background-image: url("https://img.freepik.com/premium-photo/boy-cycling-city-front-big-house-smart_756262-7331.jpg");
-    background-size: cover;
+    /* background-color: rgb(81, 166, 211); */
+    background-image: url('https://i.pinimg.com/564x/b8/be/5f/b8be5f5958f94978f7e5f3494dfdaac6.jpg');
+    background-size:contain;
+  
     
 }
 .heading{
@@ -11,5 +13,4 @@
     padding-top:90px;
     
 }
-
 
