@@ -2,6 +2,9 @@ import React from 'react'
 import './CityCards.css'
 import { Container } from 'react-bootstrap'
 import Card from 'react-bootstrap/Card';
+import { Link } from 'react-router-dom';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faArrowRight } from '@fortawesome/free-solid-svg-icons';
   
 
 function City_Cards() {
@@ -16,8 +19,15 @@ function City_Cards() {
             <div className="col-md-6 col-sm-12 col-lg-4 my-3">
                 <Card style={{ width: '23rem' }}>
                   <Card.Img variant="top" src="https://i.pinimg.com/originals/f6/c9/a3/f6c9a3cbb33bc8bbed47844c4b7852ae.jpg" />
-                  <Card.Body>           
-                        <p className='text-center fw-bold fs-4 '>Kakkanad</p>            
+                  <Card.Body className="d-flex justify-content-center">           
+                        <div className="d-flex">
+                          <p className='text-center fw-bold fs-4 '>Kakkanad</p>  
+                          <Link to="/city">
+                              <button  className='px-3 py-1 mt-1 ms-5' style={{border:'1px solid transparent',borderRadius:'5px',backgroundColor:'grey',color:'white'}}>
+                                 <FontAwesomeIcon icon={faArrowRight} />
+                              </button>
+                          </Link> 
+                        </div>         
                   </Card.Body>
               </Card>
             </div>

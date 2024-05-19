@@ -13,7 +13,7 @@ import { Link } from 'react-router-dom';
 function Hostels() {
 
   const [hostel,setHostel]=useState([])
-
+  const [filter, setFilter] = useState('all');
   const [hostelstatus,sethostelstatus]=useState(false)
 
 const getHostels=async()=>{
@@ -23,6 +23,18 @@ const getHostels=async()=>{
     setHostel(data)
     sethostelstatus(true)
 }
+
+const filteredItems = () => {
+  if (filter === "Men's Hostel") {
+    return hostel.filter((item) => item.category === "Men's Hostel");
+  } else if (filter === "Women's Hostel") {
+    return hostel.filter((item) => item.category === "Women's Hostel");
+  } else {
+    return hostel;
+  }
+};
+
+
 
 console.log(hostel);
 
@@ -34,18 +46,18 @@ useEffect(()=>{
     <>
       <h2 className='text-center mb-3'>Recently Added Properties</h2>
       <div className='d-flex align-items-center justify-content-center'>
-      <Button style={{backgroundColor:'rgb(45, 141, 173)',border:'1px soild transparent'}} className='btn  btn-outline-dark' variant=" mx-1">All Categories</Button>
-      <Button style={{backgroundColor:'rgb(234, 249, 255)'}} variant=" ">Mens Hostel</Button>{' '}
-      <Button style={{backgroundColor:'rgb(234, 249, 255)'}} variant=" mx-1">Womens Hostel</Button>{' '}
+      <Button style={{backgroundColor:'rgb(45, 141, 173)',border:'1px soild transparent'}} onClick={() => setFilter('All Categories')} className='btn  btn-outline-dark' variant=" mx-1">All Categories</Button>
+      <Button style={{backgroundColor:'rgb(234, 249, 255)'}} onClick={() => setFilter("Men's Hostel")} variant=" ">Mens Hostel</Button>{' '}
+      <Button style={{backgroundColor:'rgb(234, 249, 255)'}} onClick={() => setFilter("Women's Hostel")} variant=" mx-1">Womens Hostel</Button>{' '}
       </div>
 
   
         
           <Container className='d-flex align-items-center justify-content-center mx-auto '>
           <Row className='d-flex align-items-center justify-content-center mt-5  mx-auto'>
-       {   hostel?.length>0?
+       {  filteredItems()?.length>0?
         
-        hostel?.map((item)=>( 
+        filteredItems()?.map((item)=>( 
             <Col className='mb-4'>
                 <Card style={{ width: '18rem' }}>
                   <Card.Img variant="top" src={item.imageUrl} />
