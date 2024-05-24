@@ -7,12 +7,14 @@ import { faFacebook, faGoogle } from "@fortawesome/free-brands-svg-icons";
 import { Link, useNavigate } from "react-router-dom";
 import { ToastContainer, toast } from "react-toastify";
 import 'react-toastify/dist/ReactToastify.css';
+import HomeHeader from "../components/HomeHeader";
+import Footer from "../components/Footer";
 
 
 
 function Login() {
   const [username, usernameupdate] = useState('');
-  const [password, passwordupdate] = useState('');
+  const [password, passwordupdate] = useState('');  
 
   const usenavigate = useNavigate();
 

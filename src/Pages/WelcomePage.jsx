@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import './Landing.css'
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
 import {faArrowRight, faBriefcase, faLocationDot, faSquareParking, faWifi} from '@fortawesome/free-solid-svg-icons';

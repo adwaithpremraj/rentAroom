@@ -10,6 +10,8 @@ import { Link, useNavigate } from 'react-router-dom';
 import { uploadUserApi } from '../services/allApi';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import HomeHeader from '../components/HomeHeader';
+import Footer from '../components/Footer';
 
 
 function Sigin() {
@@ -120,7 +122,6 @@ function Sigin() {
                 </div>
 
             </div>
-
             <ToastContainer position='top-center' theme='colored' autoClose={2000} />
 
         </>

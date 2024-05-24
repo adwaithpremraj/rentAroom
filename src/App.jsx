@@ -10,9 +10,11 @@ import Header from './components/Header'
 import { Routes,Route } from 'react-router-dom'
 import Payment from './components/Payment'
 import CityPage from './Pages/CityPage'
+import HomeHeader from './components/HomeHeader'
 
 
 function App() {
+
   
 
   return (
@@ -20,16 +22,14 @@ function App() {
       <Header/>
         <Routes>
           <Route path='/' element={<WelcomePage/>}/>
-          <Route path='/home' element={<Home/>}/>
-          <Route path='/Login' element={<Login/>}/>
-          <Route path='/Signup' element={<Signup/>}/>
+            <Route path='/Login' element={<Login/>}/>
+            <Route path='/Signup' element={<Signup/>}/>
+          
+            <Route path='/home' element={<Home/>}/>
+
           <Route path='/details' element={<HostelDetails/>}/>
           <Route path='/city' element={<CityPage/>}/>
           <Route path='/pay' element={<Payment/>}/>
-
-
-
-          
         </Routes>
       <Footer/>
       
