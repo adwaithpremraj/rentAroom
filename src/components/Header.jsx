@@ -8,6 +8,8 @@ import { useState } from 'react';
 import Modal from 'react-bootstrap/Modal';
 import { addHostelAPI } from "../services/allApi";
 import { useNavigate } from "react-router-dom";
+import { useAuth } from '../context/AuthContexts'
+
 
 
 function Header() {
@@ -15,6 +17,8 @@ function Header() {
   const navigate=useNavigate()
 
   const [show, setShow] = useState(false);
+  const { isLoggedIn, logout } = useAuth();
+
 
   const [hostel,setHostel]=useState({
     id:"",
@@ -84,7 +88,21 @@ function Header() {
           <Navbar.Toggle aria-controls="navbarScroll" />
           <Navbar.Collapse id="navbarScroll">
             <Nav className="ms-auto ">
-            <Button onClick={()=>navigate('./Login')} className='btn-outline-light' style={{border:'1px solid transparent', backgroundColor:'rgb(45, 141, 173)'}}>SignIn <FontAwesomeIcon icon={faArrowRight} /></Button>
+
+            {isLoggedIn ?
+            (
+              <Button  onClick={logout}  className='btn-outline-light'
+              style={{border:'1px solid transparent',
+               backgroundColor:'rgb(45, 141, 173)'}}>LOG OUT</Button>
+            ):(
+
+              <Button onClick={()=>navigate('./Login')} className='btn-outline-light'
+               style={{border:'1px solid transparent',
+                backgroundColor:'rgb(45, 141, 173)'}}>LOGIN <FontAwesomeIcon icon={faArrowRight} />
+              </Button>
+              )
+          }
+
 
               <Button
                 className=" ms-3 me-3"
@@ -95,6 +113,8 @@ function Header() {
               >
                 Add Your Hostel <FontAwesomeIcon icon={faMapLocation} />
               </Button>
+
+
             </Nav>
           </Navbar.Collapse>
         </Container>

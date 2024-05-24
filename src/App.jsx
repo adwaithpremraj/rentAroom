@@ -11,6 +11,7 @@ import { Routes,Route } from 'react-router-dom'
 import Payment from './components/Payment'
 import CityPage from './Pages/CityPage'
 import HomeHeader from './components/HomeHeader'
+import { AuthProvider } from './context/AuthContexts';
 
 
 function App() {
@@ -19,6 +20,7 @@ function App() {
 
   return (
     <>
+    <AuthProvider>
       <Header/>
         <Routes>
           <Route path='/' element={<WelcomePage/>}/>
@@ -33,6 +35,7 @@ function App() {
         </Routes>
       <Footer/>
       
+      </AuthProvider>
     </>
   )
 }

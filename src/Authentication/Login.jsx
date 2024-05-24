@@ -7,14 +7,18 @@ import { faFacebook, faGoogle } from "@fortawesome/free-brands-svg-icons";
 import { Link, useNavigate } from "react-router-dom";
 import { ToastContainer, toast } from "react-toastify";
 import 'react-toastify/dist/ReactToastify.css';
-import HomeHeader from "../components/HomeHeader";
-import Footer from "../components/Footer";
+
+import { useAuth } from '../context/AuthContexts'
+
 
 
 
 function Login() {
   const [username, usernameupdate] = useState('');
   const [password, passwordupdate] = useState('');  
+  // const [islogin, setIslogin] = useState(false);  
+  const { login } = useAuth();
+
 
   const usenavigate = useNavigate();
 
@@ -31,6 +35,7 @@ function Login() {
           toast.info('Please enter valid username');
         }else{
           if(resp.confirmPassword === password){
+            login();
             usenavigate('/home')
             toast.success('Succesfull');
           }else{

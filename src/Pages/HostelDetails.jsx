@@ -5,6 +5,7 @@ import { faBowlFood, faCouch, faDoorClosed, faLocationDot, faMotorcycle, faPhone
 import { Button } from 'react-bootstrap';
 import { useState , useEffect } from 'react'
 import { payamount } from '../services/allApi';
+import { useLocation } from 'react-router-dom';
 
 
 function HostelDetails() {
