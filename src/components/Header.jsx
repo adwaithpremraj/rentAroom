@@ -12,7 +12,7 @@ import { useAuth } from '../context/AuthContexts'
 
 
 
-function Header() {
+function Header({isLoggedIn}) {
 
   const navigate=useNavigate()
 
@@ -136,7 +136,13 @@ function Header() {
                       </div>
                      
                       <div className='mt-3 mb-3'>
-                        <input type="text" placeholder='image'  className='form-control' onChange={(e)=>setHostel({...hostel,imageUrl:e.target.value})}/>
+                        <input type="text" placeholder='image 1'  className='form-control' onChange={(e)=>setHostel({...hostel,imageUrl:e.target.value})}/>
+                      </div>
+                      <div className='mt-3 mb-3'>
+                        <input type="text" placeholder='image 2'  className='form-control' onChange={(e)=>setHostel({...hostel,imageUrl2:e.target.value})}/>
+                      </div>
+                      <div className='mt-3 mb-3'>
+                        <input type="text" placeholder='image 3'  className='form-control' onChange={(e)=>setHostel({...hostel,imageUrl3:e.target.value})}/>
                       </div>
                       <div className='mt-3 mb-3'>
                         <input type="text" placeholder='Hostel Name'  className='form-control' onChange={(e)=>setHostel({...hostel,hostelName:e.target.value})} />

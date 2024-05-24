@@ -10,6 +10,12 @@ import { useLocation } from 'react-router-dom';
 
 function HostelDetails() {
 
+
+
+  const location = useLocation();
+  const { selectedhostel } = location.state || {};
+
+
   useEffect(() => {
     const script = document.createElement('script');
     script.src = "https://checkout.razorpay.com/v1/checkout.js";
@@ -80,17 +86,17 @@ function HostelDetails() {
               <div className="col-1"></div>
                 <div className="col-5 ">    
                         <img style={{width:'100%', height:'70vh'}}
-                        src="https://0e1f9520cfbb74a61ba4-0c2137d93f8d1ba7abe4c5e2888a558f.ssl.cf1.rackcdn.com/1484737203254IMG7152.jpeg" alt="ssss" />
+                        src={selectedhostel.imageUrl} alt="ssss" />
                 </div>
                 <div className="col-5 ">
                     <div className="row " style={{height:'35vh'}}>
                     <img style={{width:'100%', height:'33vh'}}
-                        src="https://0e1f9520cfbb74a61ba4-0c2137d93f8d1ba7abe4c5e2888a558f.ssl.cf1.rackcdn.com/1484737203254IMG7152.jpeg" alt="ssss" />
+                        src={selectedhostel.imageUrl1} alt="ssss" />
                 
                     </div>
                     <div className="row " style={{height:'35vh'}}>
                     <img style={{width:'100%', height:'35vh'}}
-                        src="https://0e1f9520cfbb74a61ba4-0c2137d93f8d1ba7abe4c5e2888a558f.ssl.cf1.rackcdn.com/1484737203254IMG7152.jpeg" alt="ssss" />
+                        src={selectedhostel.imageUrl2} alt="ssss" />
                   
                     </div>
                     <div className="col-1"></div>
@@ -100,13 +106,14 @@ function HostelDetails() {
             </div>
     
     
-          <div className='details d-flex algn-items-center justify-content-center m-4'>
+            { selectedhostel &&     <div className='details d-flex algn-items-center justify-content-center m-4'>
+
         
                 <div className='col-6 hosteldetails ps-4'>
                 <div className="hostel-body  px-3" style={{backgroundColor:'rgb(234, 249, 255)',border:'1px soild transparent',borderRadius:'15px'}}>
-                            <h2 style={{color:'rgb(45, 141, 173)'}} className='mt-2'>SN Women's Hostel</h2>
-                            <p>Tapasya Home, Penevazhi, Near Nice Chemicals C/O Edappally</p>
-                            <p id='box'>WOMEN'S HOSTEL</p>
+                            <h2 style={{color:'rgb(45, 141, 173)'}} className='mt-2'>{selectedhostel.hostelName}</h2>
+                            <p>{selectedhostel.location}</p>
+                            <p id='box'>{selectedhostel.category}</p>
                             <h5 style={{color:'rgb(45, 141, 173)'}}>Teanut Preffered</h5>
                             <p>Students and Working Professionals</p>
                 </div>
@@ -152,7 +159,7 @@ function HostelDetails() {
                 <div class="hostel-body px-3" style={{backgroundColor:'rgb(234, 249, 255)',border:'1px soild transparent',borderRadius:'15px'}}>
                             <h1 style={{color:'rgb(45, 141, 173)'}}>RENT</h1>
                             <button className="btn btn-primary" onClick={payHandle}>PAY</button>
-                            <p><b>₹ 2500</b></p>
+                            <p><b>₹ {selectedhostel.rent}</b></p>
                             <hr className='m-2'/>
                             <h3 style={{color:'rgb(45, 141, 173)'}}>Additional fee</h3>
                             <p style={{fontSize:'11px'}}>Security Deposit - ₹ 1000(500- Admission fee + caution Deposit) </p>
@@ -173,7 +180,7 @@ function HostelDetails() {
     
                 </div>
            </div>
-            
+}
         </div>
 
     
