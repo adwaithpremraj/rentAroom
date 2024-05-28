@@ -9,6 +9,8 @@ import Modal from 'react-bootstrap/Modal';
 import { addHostelAPI } from "../services/allApi";
 import { Link, useNavigate } from "react-router-dom";
 import { useAuth } from '../context/AuthContexts'
+import Dropdown from 'react-bootstrap/Dropdown';
+
 
 
 
@@ -34,6 +36,9 @@ function Header() {
 
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
+  const handleSelect = (eventKey) => {
+    setHostel({ ...hostel, category: eventKey });
+  };
 
   const handleAdd=async()=>{
     const {id,category,hostelName,rent,location,imageUrl}=hostel
@@ -129,9 +134,17 @@ function Header() {
                 <div className='mt-3 mb-3'>
                         <input type="text" placeholder='id'  className='form-control' onChange={(e)=>setHostel({...hostel,id:e.target.value})}/>
                       </div>
-                      <div className='mt-3 mb-3'>
-                        <input type="text" placeholder='Category'  className='form-control' onChange={(e)=>setHostel({...hostel,category:e.target.value})}/>
-                      </div>
+                      
+                      <Dropdown onSelect={handleSelect}>
+        <Dropdown.Toggle variant="secondary" id="dropdown-basic">
+          {hostel.category || 'Category'}
+        </Dropdown.Toggle>
+
+        <Dropdown.Menu>
+          <Dropdown.Item eventKey="Men Hostel">Men Hostel</Dropdown.Item>
+          <Dropdown.Item eventKey="Women Hostel">Women Hostel</Dropdown.Item>
+        </Dropdown.Menu>
+      </Dropdown>
                      
                       <div className='mt-3 mb-3'>
                         <input type="text" placeholder='image 1'  className='form-control' onChange={(e)=>setHostel({...hostel,imageUrl:e.target.value})}/>
