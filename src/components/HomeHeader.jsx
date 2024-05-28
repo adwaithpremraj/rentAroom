@@ -38,7 +38,7 @@ function HomeHeader() {
           <Navbar.Toggle aria-controls="navbarScroll" />
           <Navbar.Collapse id="navbarScroll">
             <Nav className="ms-auto ">
-            <Button onClick={()=>navigate('./Login')} className='btn-outline-light me-3' style={{border:'1px solid transparent', backgroundColor:'rgb(45, 141, 173)'}}>Sigin  <FontAwesomeIcon icon={faArrowRight} /></Button>
+            <Button onClick={()=>navigate('./Login')} className='btn-outline-light me-3' style={{border:'1px solid transparent', backgroundColor:'rgb(45, 141, 173)'}}>Signup  <FontAwesomeIcon icon={faArrowRight} /></Button>
             <Button onClick={()=>navigate('./Signup')} className='btn-outline-light' style={{border:'1px solid transparent', backgroundColor:'rgb(45, 141, 173)'}}>Login <FontAwesomeIcon icon={faArrowRight} /></Button>
 
 
