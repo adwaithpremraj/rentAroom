@@ -9,6 +9,7 @@ import { ToastContainer, toast } from "react-toastify";
 import 'react-toastify/dist/ReactToastify.css';
 
 import { useAuth } from '../context/AuthContexts'
+import HomeHeader from "../components/HomeHeader";
 
 
 
@@ -63,6 +64,7 @@ function Login() {
 
   return (
   <>
+      <HomeHeader/>
       <div className="container my-5 " style={{borderRadius: "1rem", backgroundColor:"rgb(234, 249, 255)" }}>
         <div className="row">
           <div className="col-lg-6">

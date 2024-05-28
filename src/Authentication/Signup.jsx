@@ -45,6 +45,7 @@ function Sigin() {
 
     return (
         <>
+            <HomeHeader/>
             <div className="container my-5 " style={{ borderRadius: "1rem", backgroundColor: "rgb(234, 249, 255)" }}>
 
                 <div className="row">
