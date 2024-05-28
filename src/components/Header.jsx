@@ -7,17 +7,17 @@ import Navbar from "react-bootstrap/Navbar";
 import { useState } from 'react';
 import Modal from 'react-bootstrap/Modal';
 import { addHostelAPI } from "../services/allApi";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { useAuth } from '../context/AuthContexts'
 
 
 
-function Header({isLoggedIn}) {
+function Header() {
 
   const navigate=useNavigate()
 
   const [show, setShow] = useState(false);
-  const { isLoggedIn, logout } = useAuth();
+  // const { isLoggedIn, logout } = useAuth();
 
 
   const [hostel,setHostel]=useState({
@@ -89,19 +89,17 @@ function Header({isLoggedIn}) {
           <Navbar.Collapse id="navbarScroll">
             <Nav className="ms-auto ">
 
-            {isLoggedIn ?
-            (
-              <Button  onClick={logout}  className='btn-outline-light'
-              style={{border:'1px solid transparent',
-               backgroundColor:'rgb(45, 141, 173)'}}>LOG OUT</Button>
-            ):(
+            
+              <Link to='/'>
+                <Button  className='btn-outline-light'
+                style={{border:'1px solid transparent',
+                 backgroundColor:'rgb(45, 141, 173)'}}  >LOG OUT</Button>
+              </Link>
+            
 
-              <Button onClick={()=>navigate('./Login')} className='btn-outline-light'
-               style={{border:'1px solid transparent',
-                backgroundColor:'rgb(45, 141, 173)'}}>LOGIN <FontAwesomeIcon icon={faArrowRight} />
-              </Button>
-              )
-          }
+  
+              
+          
 
 
               <Button

@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import './Landing.css'
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
 import {faArrowRight, faBriefcase, faLocationDot, faSquareParking, faWifi} from '@fortawesome/free-solid-svg-icons';
+import HomeHeader from '../components/HomeHeader';
 
 
 
@@ -11,6 +12,8 @@ function WelcomePage() {
 
     return (
         <>
+              <HomeHeader/>
+
         <div className='landing'>
  
 

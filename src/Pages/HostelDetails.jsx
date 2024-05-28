@@ -6,6 +6,7 @@ import { Button } from 'react-bootstrap';
 import { useState , useEffect } from 'react'
 import { payamount } from '../services/allApi';
 import { useLocation } from 'react-router-dom';
+import Header from '../components/Header';
 
 
 function HostelDetails() {
@@ -73,13 +74,14 @@ function HostelDetails() {
       console.error("Error creating Razorpay order:", err);
     }
   }
-
+  
 
 
   return (
 
         
         <div>
+          <Header/>
 
     
             <div className="row m-5 " style={{height:'70vh'}}>
@@ -91,12 +93,12 @@ function HostelDetails() {
                 <div className="col-5 ">
                     <div className="row " style={{height:'35vh'}}>
                     <img style={{width:'100%', height:'33vh'}}
-                        src={selectedhostel.imageUrl1} alt="ssss" />
+                        src={selectedhostel.imageUrl2} alt="ssss" />
                 
                     </div>
                     <div className="row " style={{height:'35vh'}}>
                     <img style={{width:'100%', height:'35vh'}}
-                        src={selectedhostel.imageUrl2} alt="ssss" />
+                        src={selectedhostel.imageUrl3} alt="ssss" />
                   
                     </div>
                     <div className="col-1"></div>

@@ -21,7 +21,7 @@ function App() {
   return (
     <>
     <AuthProvider>
-      <Header/>
+      {/* <Header/> */}
         <Routes>
           <Route path='/' element={<WelcomePage/>}/>
             <Route path='/Login' element={<Login/>}/>
